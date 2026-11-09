@@ -15,3 +15,14 @@ With Paypal integration for a safe and encrypted purchases, this website has all
 ![product page](https://github.com/TahaInc/hyun/blob/master/images/screenshot_4.png?raw=true)
 
 ![product page](https://github.com/TahaInc/hyun/blob/master/images/screenshot_5.png?raw=true)
+
+## Run
+
+Every push to `main` builds `ghcr.io/taharhidouani/hyun` (tags `main` and `sha-<commit>`) on GitHub Actions. The image serves the site with FrankenPHP on port 8080 and answers `GET /healthz`. It writes no files.
+
+```sh
+docker build -t hyun .
+docker run --rm -p 8080:8080 hyun
+```
+
+The order notification (`Payment_Validation.php`) uses PHP `mail()`, which needs a mail transport the image does not include.
