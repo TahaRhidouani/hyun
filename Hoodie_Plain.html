@@ -49,33 +49,33 @@
                 if ($(window).innerWidth() < 1350 && $(window).innerWidth() > 1200) {
                     $('#black').click(function () {
                         $('.small').attr('src', 'assets/images/FFFFFF-0.png');
-                        $('.big').attr('src', 'assets/images/items/Hoodie_Plain_black (Front).png');
+                        $('.big').attr('src', 'assets/images/items/Hoodie_Plain_black-Front.webp');
                     });
                     $('#white').click(function () {
                         $('.small').attr('src', 'assets/images/FFFFFF-0.png');
-                        $('.big').attr('src', 'assets/images/items/Hoodie_Plain_white (Front).png');
+                        $('.big').attr('src', 'assets/images/items/Hoodie_Plain_white-Front.webp');
                     });
                 } else if ($(window).innerWidth() <= 1200) {
                     $('#black').click(function () {
                         $('.small').attr('src', 'assets/images/FFFFFF-0.png');
                         $('.big').attr('src', 'assets/images/FFFFFF-0.png');
                         $('.underpicture').attr('src',
-                            'assets/images/items/Hoodie_Plain_black (Front).png');
+                            'assets/images/items/Hoodie_Plain_black-Front.webp');
                     });
                     $('#white').click(function () {
                         $('.small').attr('src', 'assets/images/FFFFFF-0.png');
                         $('.big').attr('src', 'assets/images/FFFFFF-0.png');
                         $('.underpicture').attr('src',
-                            'assets/images/items/Hoodie_Plain_white (Front).png');
+                            'assets/images/items/Hoodie_Plain_white-Front.webp');
                     });
                 } else {
                     $('#black').click(function () {
-                        $('.small').attr('src', 'assets/images/items/Hoodie_Plain_black (Back).png');
-                        $('.big').attr('src', 'assets/images/items/Hoodie_Plain_black (Front).png');
+                        $('.small').attr('src', 'assets/images/items/Hoodie_Plain_black-Back.webp');
+                        $('.big').attr('src', 'assets/images/items/Hoodie_Plain_black-Front.webp');
                     });
                     $('#white').click(function () {
-                        $('.small').attr('src', 'assets/images/items/Hoodie_Plain_white (Back).png');
-                        $('.big').attr('src', 'assets/images/items/Hoodie_Plain_white (Front).png');
+                        $('.small').attr('src', 'assets/images/items/Hoodie_Plain_white-Back.webp');
+                        $('.big').attr('src', 'assets/images/items/Hoodie_Plain_white-Front.webp');
                     });
                 }
             }
@@ -109,7 +109,7 @@
                 <span class="menu-icon__line menu-icon__line-right"></span>
             </div>
 
-            <a href="Home.html"><img class="navlogo" src="assets/images/logo.jpg"></a>
+            <a href="Home.html"><img class="navlogo" src="assets/images/logo.webp"></a>
         </div>
 
         <script type="text/javascript">
@@ -214,13 +214,13 @@
             <tr>
                 <th style="width: 60%;" class="picturetab">
                     <div class="product-photo">
-                        <img class="small" style="z-index: 1;" src="assets/images/items/Hoodie_Plain_white (Back).png">
-                        <img class="big" style="z-index: 2;" src="assets/images/items/Hoodie_Plain_white (Front).png">
+                        <img class="small" style="z-index: 1;" src="assets/images/items/Hoodie_Plain_white-Back.webp">
+                        <img class="big" style="z-index: 2;" src="assets/images/items/Hoodie_Plain_white-Front.webp">
                     </div>
                 </th>
                 <th class="infotab">
                     <div style="right: 10%;">
-                        <img class="Plain_text" src="assets/images/Plain_text (Hoodie).png"
+                        <img class="Plain_text" src="assets/images/Plain_text-Hoodie.webp"
                             style="margin: 0px 0px 30px 0px;">
                         <div class="styled-select slate">
                             <select id="size">
@@ -371,23 +371,23 @@
                 $(".picturetab").css("position", "absolute");
                 $(".infotab").css("padding", "100px 10px 0px 0px");
                 if ($('input[id=black]:checked').length > 0) {
-                    $('.underpicture').attr('src', 'assets/images/items/Hoodie_Plain_black (Front).png');
+                    $('.underpicture').attr('src', 'assets/images/items/Hoodie_Plain_black-Front.webp');
                     $(".underpicture").css("display", "block");
                 } else {
-                    $('.underpicture').attr('src', 'assets/images/items/Hoodie_Plain_white (Front).png');
+                    $('.underpicture').attr('src', 'assets/images/items/Hoodie_Plain_white-Front.webp');
                     $(".underpicture").css("display", "block");
                 }
             } else {
                 $(".picturetab").css("position", "relative");
                 $(".infotab").css("padding", "0px 100px 0px 0px");
                 if ($('input[id=black]:checked').length > 0) {
-                    $('.small').attr('src', 'assets/images/items/Hoodie_Plain_black (Back).png');
-                    $('.big').attr('src', 'assets/images/items/Hoodie_Plain_black (Front).png');
+                    $('.small').attr('src', 'assets/images/items/Hoodie_Plain_black-Back.webp');
+                    $('.big').attr('src', 'assets/images/items/Hoodie_Plain_black-Front.webp');
                     $('.underpicture').attr('src', 'assets/images/FFFFFF-0.png');
                     $(".underpicture").css("display", "none");
                 } else {
-                    $('.small').attr('src', 'assets/images/items/Hoodie_Plain_white (Back).png');
-                    $('.big').attr('src', 'assets/images/items/Hoodie_Plain_white (Front).png');
+                    $('.small').attr('src', 'assets/images/items/Hoodie_Plain_white-Back.webp');
+                    $('.big').attr('src', 'assets/images/items/Hoodie_Plain_white-Front.webp');
                     $('.underpicture').attr('src', 'assets/images/FFFFFF-0.png');
                     $(".underpicture").css("display", "none");
                 }
@@ -509,10 +509,10 @@
             }
         }
         preload(
-            "assets/images/items/Hoodie_Plain_black (Back).png",
-            "assets/images/items/Hoodie_Plain_white (Back).png",
-            "assets/images/items/Hoodie_Plain_black (front).png",
-            "assets/images/items/Hoodie_Plain_white (front).png",
+            "assets/images/items/Hoodie_Plain_black-Back.webp",
+            "assets/images/items/Hoodie_Plain_white-Back.webp",
+            "assets/images/items/Hoodie_Plain_black-Front.webp",
+            "assets/images/items/Hoodie_Plain_white-Front.webp",
         )
     </script>
 

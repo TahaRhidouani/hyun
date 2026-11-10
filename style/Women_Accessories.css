@@ -610,7 +610,7 @@ body.nav-active .nav__list-item {
 
 .el:nth-child(1) .el__bg:before {
   transition-delay: 0s;
-  background-image: url("../assets/images/W-SundaySnow-PolarNight-19-0001.jpeg");
+  background-image: url("../assets/images/W-SundaySnow-PolarNight-19-0001.webp");
 }
 
 .el:nth-child(2) {
@@ -640,7 +640,7 @@ body.nav-active .nav__list-item {
 
 .el:nth-child(2) .el__bg:before {
   transition-delay: 0.1s;
-  background-image: url("../assets/images/supreme-fall-winter-2014-collection-lookbook-3-952x536.jpg");
+  background-image: url("../assets/images/supreme-fall-winter-2014-collection-lookbook-3-952x536.webp");
 }
 
 .el:nth-child(3) {
@@ -670,7 +670,7 @@ body.nav-active .nav__list-item {
 
 .el:nth-child(3) .el__bg:before {
   transition-delay: 0.2s;
-  background-image: url("../assets/images/W-SundaySnow-PolarNight-19-0001.jpeg");
+  background-image: url("../assets/images/W-SundaySnow-PolarNight-19-0001.webp");
 }
 
 .el:nth-child(4) {
@@ -700,7 +700,7 @@ body.nav-active .nav__list-item {
 
 .el:nth-child(4) .el__bg:before {
   transition-delay: 0.3s;
-  background-image: url("../assets/images/supreme-fall-winter-2014-collection-lookbook-3-952x536.jpg");
+  background-image: url("../assets/images/supreme-fall-winter-2014-collection-lookbook-3-952x536.webp");
 }
 
 .el:nth-child(5) {
@@ -730,7 +730,7 @@ body.nav-active .nav__list-item {
 
 .el:nth-child(5) .el__bg:before {
   transition-delay: 0.4s;
-  background-image: url("../assets/images/nilton-nltn-Camper-Cardinal-Gallery-S2_1920x1080.jpg");
+  background-image: url("../assets/images/nilton-nltn-Camper-Cardinal-Gallery-S2_1920x1080.webp");
 }
 
 .el:hover .el__bg:after {
@@ -884,7 +884,7 @@ body.nav-active .nav__list-item {
   width: auto;
   height: 600px;
   position: relative;
-  background-image: url(../assets/images/nilton-nltn-Camper-Cardinal-Gallery-S2_1920x1080.jpg);
+  background-image: url(../assets/images/nilton-nltn-Camper-Cardinal-Gallery-S2_1920x1080.webp);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;

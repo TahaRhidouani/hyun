@@ -292,24 +292,33 @@ body.nav-active .nav__list-item {
 }
 
 .item-1 {
-  background-image: url("../assets/images/Windbreaker_CherryBlossom_White.jpg");
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
   transition: 0.5s;
+}
+
+.item-1.shown {
+  background-image: url("../assets/images/Windbreaker_CherryBlossom_White.webp");
 }
 
 .item-2 {
-  background-image: url("../assets/images/PufferJacket_Wave_Blue.jpg");
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
   transition: 0.5s;
 }
 
+.item-2.shown {
+  background-image: url("../assets/images/PufferJacket_Wave_Blue.jpg");
+}
+
 .item-3 {
-  background-image: url("../assets/images/Hoodie_Oni_Purple.jpg");
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
   transition: 0.5s;
+}
+
+.item-3.shown {
+  background-image: url("../assets/images/Hoodie_Oni_Purple.jpg");
 }
 
 #container {

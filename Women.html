@@ -76,7 +76,7 @@
                 <span class="menu-icon__line menu-icon__line-right"></span>
             </div>
 
-            <a href="Home.html"><img class="navlogo" src="assets/images/logo.jpg"></a>
+            <a href="Home.html"><img class="navlogo" src="assets/images/logo.webp"></a>
         </div>
 
         <script type="text/javascript">
@@ -180,11 +180,11 @@
             <div id="container" class="container">
                 <ul id="scene" class="scene">
                     <li class="layer" id="bg1" data-depth="0.20"><img
-                            src="assets/images/Banner_elements/Background_2.png"></li>
+                            src="assets/images/Banner_elements/Background_2.webp"></li>
                     <li class="layer" id="mg1" data-depth="0.50"><img
-                            src="assets/images/Banner_elements/Middleground_2.png"></li>
+                            src="assets/images/Banner_elements/Middleground_2.webp"></li>
                     <li class="layer" id="fg1" data-depth="0.70"><img
-                            src="assets/images/Banner_elements/Foreground_2.png"></li>
+                            src="assets/images/Banner_elements/Foreground_2.webp"></li>
                 </ul>
             </div>
             <script src="js/parallax.js"></script>
@@ -205,7 +205,7 @@
                     <div class="card col-12 col-md-6 col-lg-3">
                         <div class="card-wrapper">
                             <div class="card-img">
-                                <img src="assets/images/items/T-shirt_Plain_red (Front).png" alt="" title="">
+                                <img src="assets/images/items/T-shirt_Plain_red-Front.webp" alt="" title="">
                             </div>
                             <div class="card-box pb-md-5">
                                 <h4 class="card-title mbr-fonts-style display-5">
@@ -220,7 +220,7 @@
                     <div class="card col-12 col-md-6 col-lg-3">
                         <div class="card-wrapper">
                             <div class="card-img">
-                                <img src="assets/images/items/Hoodie_Oni_purple (Back).png" alt="" title="">
+                                <img src="assets/images/items/Hoodie_Oni_purple-Back.webp" alt="" title="">
                             </div>
                             <div class="card-box pb-md-5">
                                 <h4 class="card-title mbr-fonts-style display-5">
@@ -235,7 +235,7 @@
                     <div class="card col-12 col-md-6 col-lg-3">
                         <div class="card-wrapper">
                             <div class="card-img">
-                                <img src="assets/images/items/Windbreaker_CherryBlossom_white (Front).png" alt=""
+                                <img src="assets/images/items/Windbreaker_CherryBlossom_white-Front.webp" alt=""
                                     title="">
                             </div>
                             <div class="card-box">
@@ -251,7 +251,7 @@
                     <div class="card col-12 col-md-6 col-lg-3 last-child">
                         <div class="card-wrapper">
                             <div class="card-img">
-                                <img src="assets/images/items/Headwear_beanie_black.png" alt="" title="">
+                                <img src="assets/images/items/Headwear_beanie_black.webp" alt="" title="">
                             </div>
                             <div class="card-box">
                                 <h4 class="card-title mbr-fonts-style display-5">
@@ -273,7 +273,7 @@
                 <div class="col-md-12">
                     <div class="media-container-row">
                         <div class="mbr-figure" style="width: 60%;">
-                            <img src="assets/images/Women_case.jpg" alt="" title="" style="height: 400px; width: auto;">
+                            <img src="assets/images/Women_case.webp" alt="" title="" style="height: 400px; width: auto;">
                             <div class="toggle-cursor trigger-1 product-trigger__target" style="left:35%; top:15%;">
                             </div>
                         </div>
@@ -318,6 +318,18 @@
                 <a class="item item-2" href="PufferJacket_Gradient.html"></a>
                 <a class="item item-3" href="Windbreaker_Script.html "></a>
             </div>
+            <script>
+                // The top picks sit far below the fold, so their pictures load once the row nears the viewport.
+                (function () {
+                    var items = document.querySelectorAll('.gallery-wrap .item');
+                    var show = function () { items.forEach(function (item) { item.classList.add('shown'); }); };
+                    if (!('IntersectionObserver' in window)) { show(); return; }
+                    var observer = new IntersectionObserver(function (entries) {
+                        if (entries.some(function (entry) { return entry.isIntersecting; })) { show(); observer.disconnect(); }
+                    }, { rootMargin: '600px 0px' });
+                    items.forEach(function (item) { observer.observe(item); });
+                })();
+            </script>
         </section>
 
         <section class="cid-rgSELAk5DK" id="social-buttons2-1h">
@@ -393,7 +405,7 @@
                     <div class="col-md-3 col-sm-4">
                         <div class="mb-3 img-logo">
                             <a href="Home.html">
-                                <img src="assets/home_assets/images/logo.jpg" alt="HYUN logo" title="">
+                                <img src="assets/home_assets/images/logo.webp" alt="HYUN logo" title="">
                             </a>
                         </div>
                         <p class="mb-3 mbr-fonts-style foot-title display-7">

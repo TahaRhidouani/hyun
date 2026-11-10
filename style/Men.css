@@ -280,24 +280,33 @@ body.nav-active .nav__list-item {
 }
 
 .item-1 {
-  background-image: url("../assets/images/Hoodie_CherryBlossom_White.jpg");
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
   transition: 0.5s;
+}
+
+.item-1.shown {
+  background-image: url("../assets/images/Hoodie_CherryBlossom_White.jpg");
 }
 
 .item-2 {
-  background-image: url("../assets/images/PufferJacket_Gradient_Gold.jpg");
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
   transition: 0.5s;
 }
 
+.item-2.shown {
+  background-image: url("../assets/images/PufferJacket_Gradient_Gold.jpg");
+}
+
 .item-3 {
-  background-image: url("../assets/images/Windbreaker_Script_Black.jpg");
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
   transition: 0.5s;
+}
+
+.item-3.shown {
+  background-image: url("../assets/images/Windbreaker_Script_Black.webp");
 }
 
 #container {
