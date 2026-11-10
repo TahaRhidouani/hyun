@@ -316,13 +316,6 @@
                                             postsize: size,
                                             postid: data.orderID
                                         }, function () { });
-
-                                        return fetch('/paypal-transaction-complete', {
-                                            method: 'post',
-                                            body: JSON.stringify({
-                                                orderID: data.orderID,
-                                            })
-                                        });
                                     });
                                 },
 
@@ -336,47 +329,6 @@
                                 },
 
                             }).render('#paypal-button-container');
-                        </script>
-
-                        <script type="text/javascript">
-                            var PAYPAL_CLIENT = 'PAYPAL_LIVE_CLIENT';
-                            var PAYPAL_SECRET = 'PAYPAL_LIVE_SECRET';
-
-                            PAYPAL_OAUTH_API = 'https://api.paypal.com/v1/oauth2/token/';
-                            PAYPAL_ORDER_API = 'https://api.paypal.com/v2/checkout/orders/';
-
-                            basicAuth = base64encode(`${PAYPAL_CLIENT}:${PAYPAL_SECRET}`);
-                            auth = http.post(PAYPAL_OAUTH_API, {
-                                headers: {
-                                    Accept: `application/json`,
-                                    Authorization: `Basic ${basicAuth}`
-                                },
-                                data: `grant_type=client_credentials`
-                            });
-
-                            function handleRequest(request, response) {
-
-                                orderID = request.body.orderID;
-
-                                details = http.get(PAYPAL_ORDER_API + orderID, {
-                                    headers: {
-                                        Accept: `application/json`,
-                                        Authorization: `Bearer ${auth.access_token}`
-                                    }
-                                });
-
-                                if (details.error) {
-                                    return response.send(500);
-                                }
-
-                                if (details.purchase_units[0].amount.value !== '5.77') {
-                                    return response.send(400);
-                                }
-
-                                database.saveTransaction(orderID);
-
-                                return response.send(200);
-                            }
                         </script>
                     </div>
                 </th>
@@ -406,8 +358,6 @@
                     $('.underpicture').attr('src', 'assets/images/items/Hoodie_Oni_green-Back.webp');
                     $(".underpicture").css("display", "block");
                 }
-            } else if ($(window).innerWidth() <= 600) {
-                $('#particles-js').css("background-image", "url(assets/images/ws_Mac_OS_X_Mt_Fuji_1920x1200.webp)");
             } else {
                 $(".picturetab").css("position", "relative");
                 $(".infotab").css("padding", "0px 100px 0px 0px");
@@ -652,59 +602,6 @@
             window.addEventListener('resize', resizeThrottler, false);
 
         })();
-    </script>
-
-    <script type="text/javascript">
-        function DropDown(el) {
-            this.dd = el;
-            this.placeholder = this.dd.children('span');
-            this.opts = this.dd.find('ul.drop li');
-            this.val = '';
-            this.index = -1;
-            this.initEvents();
-        }
-
-        DropDown.prototype = {
-            initEvents: function () {
-                var obj = this;
-                obj.dd.on('click', function (e) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    $(this).toggleClass('active');
-
-                    var mobile = (/iphone|ipad|ipod|android|blackberry|mini|windows\sce|palm/i
-                        .test(navigator.userAgent
-                            .toLowerCase()));
-                    if (mobile) {
-                        $("#paypal-button-container").css("padding", "0px 0px 100px 100px");
-                    } else {
-                        $("#paypal-button-container").css("padding", "0px 0px 100px 0px");
-                    }
-                });
-                obj.opts.on('click', function () {
-                    var opt = $(this);
-                    document.getElementById("paypal-button-container").style.opacity = "1";
-                    obj.val = opt.text();
-                    obj.index = opt.index();
-                    obj.placeholder.text(obj.val);
-                    opt.siblings().removeClass('selected');
-                    opt.filter(':contains("' + obj.val + '")').addClass('selected');
-                }).change();
-            },
-            getValue: function () {
-                return this.val;
-            },
-            getIndex: function () {
-                return this.index;
-            }
-        };
-
-        $(function () {
-            var dd1 = new DropDown($('#noble-gases'));
-            $(document).click(function () {
-                $('.wrap-drop').removeClass('active');
-            });
-        });
     </script>
 
     <script type="text/javascript">

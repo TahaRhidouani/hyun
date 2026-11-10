@@ -200,8 +200,7 @@
     <main>
         <section class="Hoodie_gallery" style="position: absolute; display: block;">
             <h1>Hoodie Gallery</h1>
-            <div class="slider" id="slider"
-                style="--img-prev:url(assets/images/supreme-fall-winter-2014-collection-lookbook-3-952x536.webp);">
+            <div class="slider" id="slider">
                 <div class="slider__content" id="slider-content">
                     <div class="slider__images">
                         <div class="slider__images-item slider__images-item--active" data-id="1"><img
@@ -832,7 +831,7 @@
         var ANIM_SPEED = 0.075;
 
         var Oni_frame = void 0,
-            Oni_frame = void 0,
+            Oni_card = void 0,
             img = void 0,
             mouse = void 0,
             userPos = void 0,
@@ -852,6 +851,9 @@
         };
 
         function resize() {
+            if (!Oni_card) {
+                return;
+            }
             var rect = Oni_card.getBoundingClientRect();
             center = [0.5 * Oni_card.clientWidth + rect.left, 0.5 * Oni_card.clientHeight + rect.top];
             userPos = [

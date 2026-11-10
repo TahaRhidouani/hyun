@@ -230,13 +230,6 @@
                                             postsize: size,
                                             postid: data.orderID
                                         }, function () { });
-
-                                        return fetch('/paypal-transaction-complete', {
-                                            method: 'post',
-                                            body: JSON.stringify({
-                                                orderID: data.orderID,
-                                            })
-                                        });
                                     });
                                 },
 
@@ -250,47 +243,6 @@
                                 },
 
                             }).render('#paypal-button-container');
-                        </script>
-
-                        <script type="text/javascript">
-                            var PAYPAL_CLIENT = 'PAYPAL_LIVE_CLIENT';
-                            var PAYPAL_SECRET = 'PAYPAL_LIVE_SECRET';
-
-                            PAYPAL_OAUTH_API = 'https://api.paypal.com/v1/oauth2/token/';
-                            PAYPAL_ORDER_API = 'https://api.paypal.com/v2/checkout/orders/';
-
-                            basicAuth = base64encode(`${PAYPAL_CLIENT}:${PAYPAL_SECRET}`);
-                            auth = http.post(PAYPAL_OAUTH_API, {
-                                headers: {
-                                    Accept: `application/json`,
-                                    Authorization: `Basic ${basicAuth}`
-                                },
-                                data: `grant_type=client_credentials`
-                            });
-
-                            function handleRequest(request, response) {
-
-                                orderID = request.body.orderID;
-
-                                details = http.get(PAYPAL_ORDER_API + orderID, {
-                                    headers: {
-                                        Accept: `application/json`,
-                                        Authorization: `Bearer ${auth.access_token}`
-                                    }
-                                });
-
-                                if (details.error) {
-                                    return response.send(500);
-                                }
-
-                                if (details.purchase_units[0].amount.value !== '5.77') {
-                                    return response.send(400);
-                                }
-
-                                database.saveTransaction(orderID);
-
-                                return response.send(200);
-                            }
                         </script>
                     </div>
                 </th>
@@ -325,23 +277,6 @@
 
         $(window).bind('resize', function () {
             screenClass();
-        });
-    </script>
-
-    <script type="text/javascript">
-        $('#school').click(function () {
-            var n = 5;
-            var val = this.selectedIndex;
-            if ((this.selectedIndex < ($(this).find('option').length - n)) && (
-                this
-                    .selectedIndex > n)) {
-                this.selectedIndex += n;
-                this.selectedIndex -= (2 * n);
-                this.selectedIndex += n;
-            } else {
-                this.selectedIndex = ((this.selectedIndex < n) ? 0 : 99);
-                this.selectedIndex = val;
-            }
         });
     </script>
 
